@@ -1,0 +1,196 @@
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    height: 80px;
+    border-bottom: solid rgba(0,0,0,0.1) 1px;
+}
+
+header .left {
+    display: flex;
+    align-items: baseline;
+    gap: 80px;
+    height: 100%;
+    float: left;
+}
+
+header .left .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .left .categorias {
+    height: 100%;
+    float:inline-end;
+}
+
+header .left .categorias *{
+    height: 94%;
+}
+
+header .left .categorias ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    width: 500px;
+}
+
+header .left .categorias ul li {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: hsl(219, 9%, 45%);
+}
+
+
+header .left .categorias ul li div {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 5px rgba(0,0,0,0);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header .left .categorias ul li div:hover {
+    border-bottom: var(--Orange) solid 5px;
+    transition: 0.3s;
+}
+
+
+
+header .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+header .right img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 2px rgba(0,0,0,0);
+    transition: 0.3s;
+}
+
+header .right img:hover {
+    transition: 0.3s;
+    border: solid 2px var(--Orange);
+}
+
+header .right .cart {
+    position: relative;
+}
+
+header .right .cart .bubble {
+    display: none;
+}
+
+header .right .cart .bubble.active{
+    background-color: var(--Orange);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    left: 13px;
+    top: -2px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6em;
+    font-weight: 700;
+}
+
+header .right .cart .square {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 300px;
+    top: 50px;
+    height: 200px;
+    right: -120px;
+    border: solid .2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    box-shadow: rgba(0,0,0,0.3) 2px 2px 2px 2px;
+}
+
+header .right .cart .square.active {
+    display: block;
+}
+
+header .right .cart .square .title {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    font-size: 0.8em;
+    text-indent: 20px;
+    font-weight: 700;
+    border-bottom: solid rgba(0,0,0,0.2) .2px;
+}
+
+header .right .cart .square .body {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    flex-wrap: wrap;
+    visibility: hidden;
+    /* display: none; */
+}
+
+header .right .cart .square .body.visible {
+    visibility: inherit;
+    display: flex;
+}
+
+header .right .cart .square .body .photo {
+    margin: 10px;
+    width: 55px;
+    height: 55px;
+}
+
+header .right .cart .square .body .photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+header .right .cart .square .body .details {
+    height: 55px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+header .right .cart .square .body .details .name {
+    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+}
+
+header .right .cart .square .body .details .quantity {
+    display: flex;
+    gap: 3px;
+    height: 25px;
+    font-size: 14px;
+}
+
+header .right .cart .square .body button {
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    background-color: var(--Orange);
+    position: relative;
+    bottom: 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
